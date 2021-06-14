@@ -14,84 +14,13 @@ import javax.swing.JLabel;
 import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
-import javax.swing.JFrame;
+ import javax.swing.JFrame;
 
-public class Main extends JFrame{
+public class Main {
     
-    Main(){
-        setTitle ("Geometry Calculator");
-        setLocation(300,200);
-        setSize(340,200);
-
-        Container con = getContentPane();
-        FlowLayout lay1 = new FlowLayout();
-        con.setLayout(lay1);
-
-        JLabel l1 = new JLabel(" Width       :");
-        JLabel l2 = new JLabel(" Height      :");
-        JLabel l3 = new JLabel(" Answer");
-        JLabel err = new JLabel();
-
-        JTextField t1 = new JTextField(20);
-        JTextField t2 = new JTextField(20);
-        JTextField t3 = new JTextField(25);
-        t3.setSize(200, 40);
-
-        JButton btn1 = new JButton("  Perimeter  ");
-        JButton btn2 = new JButton("     Area    ");
-        JButton btn3 = new JButton("     Clear    ");
-        
-//        get perimetre
-        btn1.addActionListener((ActionEvent e) -> {
-            try {
-                double height = Double.parseDouble(t1.getText());
-                double width = Double.parseDouble(t2.getText());
-                double perimetre = (height+width)*2;
-                t3.setText(String.valueOf(perimetre));
-            } catch (NumberFormatException r) {
-                err.setText("Input should be Numbers");
-            }
-            
-        });
-        
-//        get area
-        btn2.addActionListener((ActionEvent e) -> {
-            try {
-                double height = Double.parseDouble(t1.getText());
-                double width = Double.parseDouble(t2.getText());
-                double area = height*width;
-                t3.setText(String.valueOf(area));
-            } catch (NumberFormatException r) {
-                err.setText("Input should be Numbers");
-            }
-                
-        });
-        
-//        clear the textfields
-        btn3.addActionListener((ActionEvent e) -> {
-            t1.setText("");
-            t2.setText("");
-            t3.setText("");
-
-        });
-        
-        con.add(l1);
-        con.add(t1);
-        con.add(l2);
-        con.add(t2);
-        con.add(btn1);
-        con.add(btn2);
-        con.add(btn3);
-        con.add(l3);
-        con.add(t3);
-        con.add(err);
-    }
-
-    
-
     public static void main(String args[]){
 
-        Main frame = new Main();
+        Frame frame = new Frame();
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
  
