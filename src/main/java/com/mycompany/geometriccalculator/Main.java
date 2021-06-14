@@ -3,18 +3,12 @@
  */
 package com.mycompany.geometriccalculator;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Arshed
  */
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-
-import java.awt.Container;
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
- import javax.swing.JFrame;
 
 public class Main {
     
